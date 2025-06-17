@@ -2,6 +2,10 @@
   "name": "@sondera/quicklogin",
   "version": "0.0.0",
   "description": "Sondera QuickLogin allows you to authenticate Sondera users with a single click.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
