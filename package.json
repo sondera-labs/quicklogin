@@ -1,0 +1,31 @@
+{
+  "name": "@sondera-labs/quicklogin",
+  "version": "1.0.0",
+  "description": "Sondera QuickLogin SDK",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quicklogin",
+    "authentication",
+    "login",
+    "sondera",
+    "self-sovereign",
+    "identity",
+    "decentralized",
+    "wallet"
+  ],
+  "homepage": "sonderalabs.com/quicklogin",
+  "author": "Sondera Labs (sonderalabs.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
