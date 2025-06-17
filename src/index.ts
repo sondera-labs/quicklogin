@@ -1,5 +1,10 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { AuthConfig } from "./types";
 
-console.log(add(3, 5)); //output: 8
+/**
+ * Initializes the authentication process with the provided configuration.
+ * @param {AuthConfig} config - Configuration object for authentication
+ * @returns {void}
+ */
+export function initializeAuth(config: AuthConfig): void {
+  console.log("Initializing authentication with client ID:", config.clientId);
+}

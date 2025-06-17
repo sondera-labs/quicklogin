@@ -1,15 +1,20 @@
 {
-  "name": "@sondera-labs/quicklogin",
-  "version": "1.0.0",
-  "description": "Sondera QuickLogin SDK",
+  "name": "@sondera/quicklogin",
+  "version": "0.0.0",
+  "description": "Sondera QuickLogin allows you to authenticate Sondera users with a single click.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "start": "ts-node src/index.ts",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sondera-labs/quicklogin.git"
   },
   "keywords": [
     "quicklogin",
@@ -21,9 +26,9 @@
     "decentralized",
     "wallet"
   ],
+  "author": "Sondera Labs (https://sonderalabs.com/)",
+  "license": "Apache-2.0",
   "homepage": "sonderalabs.com/quicklogin",
-  "author": "Sondera Labs (sonderalabs.com)",
-  "license": "ISC",
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
