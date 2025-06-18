@@ -1,6 +1,6 @@
 {
   "name": "@sondera/quicklogin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sondera QuickLogin allows you to authenticate Sondera users with a single click.",
   "private": false,
   "publishConfig": {
