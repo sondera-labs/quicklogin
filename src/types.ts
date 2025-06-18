@@ -1,5 +1,5 @@
-export interface AuthConfig {
+export interface QuickLoginConfig {
   clientId: string;
-  clientSecret: string;
   redirectUri: string;
+  network?: 'mainnet' | 'testnet';
 }

@@ -1,6 +1,6 @@
 {
   "name": "@sondera/quicklogin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sondera QuickLogin allows you to authenticate Sondera users with a single click.",
   "private": false,
   "publishConfig": {
@@ -11,9 +11,16 @@
   "files": [
     "lib"
   ],
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "npx tsc",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,9 +37,12 @@
     "decentralized",
     "wallet"
   ],
-  "author": "Sondera Labs (https://sonderalabs.com/)",
+  "author": {
+    "name": "Sondera Labs",
+    "url": "https://sonderalabs.com/"
+  },
   "license": "Apache-2.0",
-  "homepage": "sonderalabs.com/quicklogin",
+  "homepage": "https:/sonderalabs.com/quicklogin/",
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"

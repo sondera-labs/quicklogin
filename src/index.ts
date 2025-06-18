@@ -1,10 +1,11 @@
-import { AuthConfig } from "./types";
+import { QuickLoginConfig } from './types';
+import { QuickLoginProvider } from './auth/QuickLoginProvider';
 
 /**
- * Initializes the authentication process with the provided configuration.
- * @param {AuthConfig} config - Configuration object for authentication
- * @returns {void}
+ * Creates a {@link QuickLoginProvider} with the provided configuration.
+ * @param {QuickLoginConfig} config - Configuration object for authentication
+ * @returns {QuickLoginProvider}
  */
-export function initializeAuth(config: AuthConfig): void {
-  console.log("Initializing authentication with client ID:", config.clientId);
+export function initializeQuickLogin(config: QuickLoginConfig): QuickLoginProvider {
+  return QuickLoginProvider.initialize(config);
 }
