@@ -1,5 +1,5 @@
 import { QuickLoginConfig } from './types';
-import { QuickLoginProvider } from './auth/QuickLoginProvider';
+import { QuickLoginProvider } from './core/QuickLoginProvider';
 
 /**
  * Creates a {@link QuickLoginProvider} with the provided configuration.
