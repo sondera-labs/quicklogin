@@ -43,7 +43,7 @@
     "url": "https://sonderalabs.com/"
   },
   "license": "Apache-2.0",
-  "homepage": "https:/sonderalabs.com/quicklogin/",
+  "homepage": "https://sonderalabs.com/quicklogin/",
   "dependencies": {
     "@types/node": "^24.0.3",
     "react": "^19.1.0",
