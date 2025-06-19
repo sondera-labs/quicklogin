@@ -1,11 +1,6 @@
-import { QuickLoginConfig } from './types';
-import { QuickLoginProvider } from './core/QuickLoginProvider';
-
-/**
- * Creates a {@link QuickLoginProvider} with the provided configuration.
- * @param {QuickLoginConfig} config - Configuration object for authentication
- * @returns {QuickLoginProvider}
- */
-export function initializeQuickLogin(config: QuickLoginConfig): QuickLoginProvider {
-  return QuickLoginProvider.initialize(config);
-}
+export { QuickLoginProvider, useQuickLoginContext } from "./core/QuickLoginProvider";
+export { QuickLoginButton } from "./components/QuickLoginButton";
+export { useQuickLogin } from "./hooks/useQuickLogin";
+export { useCurrentUser } from "./hooks/useCurrentUser";
+export { useLogout } from "./hooks/useLogout";
+export type { QuickLoginConfig } from "./types";

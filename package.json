@@ -3,26 +3,27 @@
   "version": "0.0.3",
   "description": "Sondera QuickLogin allows you to authenticate Sondera users with a single click.",
   "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib"
-  ],
   "exports": {
     ".": {
-      "import": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./styles": "./dist/style.css"
   },
-  "scripts": {
-    "start": "ts-node src/index.ts",
-    "build": "npx tsc",
-    "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "files": [
+    "/dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sondera-labs/quicklogin.git"
@@ -43,8 +44,23 @@
   },
   "license": "Apache-2.0",
   "homepage": "https:/sonderalabs.com/quicklogin/",
+  "dependencies": {
+    "@types/node": "^24.0.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "vite-plugin-dts": "^4.5.4"
+  },
   "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
   }
 }

@@ -1,23 +1,26 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src",
-    "declarationDir": "lib",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "downlevelIteration": true,
-    "declarationMap": true,
-    "declaration": true,
-    "composite": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    /* The "typeRoots" configuration specifies the locations where 
+       TypeScript looks for type definitions (.d.ts files) to 
+       include in the compilation process.*/
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"]
   },
-  "include": ["src"],
-  "exclude": ["test", "lib"]
+  /* include /index.ts*/
+  "include": ["src", "./index.ts"]
+  // "references": [{ "path": "./tsconfig.node.json" }]
 }
