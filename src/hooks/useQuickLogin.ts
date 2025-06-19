@@ -1,6 +1,6 @@
-import { useQuickLoginContext } from '../core/QuickLoginProvider';
+import { useQuickLoginContext } from '../core/useQuickLoginContext.ts';
 
 export const useQuickLogin = () => {
-  const { login, logout, isAuthenticated, isLoading, error, user } = useQuickLoginContext();
-  return { login, logout, isAuthenticated, isLoading, error, user };
-}; 
+  const { login, logout, isAuthenticated, isLoading, user } = useQuickLoginContext();
+  return { login, logout, isAuthenticated, isLoading, user };
+};

@@ -1,53 +1,32 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from "react";
-
-export interface QuickLoginContextValue {
-  user: any;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  error: string | null;
-  login: () => Promise<void>;
-  logout: () => void;
-}
-
-const QuickLoginContext = createContext<QuickLoginContextValue | undefined>(undefined);
+import { ReactNode, useCallback, useState } from 'react';
+import { QuickLoginUser } from '../types.ts';
+import { QuickLoginContext } from './useQuickLoginContext.ts';
 
 interface QuickLoginProviderProps {
   children: ReactNode;
 }
 
-export const QuickLoginProvider: React.FC<QuickLoginProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<any>(null);
+export const QuickLoginProvider = (props: QuickLoginProviderProps) => {
+  const [user, setUser] = useState<QuickLoginUser>();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  // TODO: Implement actual login logic with Sondera Desktop
   const login = useCallback(async () => {
     setIsLoading(true);
-    setError(null);
-    try {
-      // Placeholder: Replace with real communication to Sondera Desktop
-      // Simulate login
-      await new Promise((res) => setTimeout(res, 1000));
-      setUser({ id: "mock-user", address: "0x123..." });
-      setIsAuthenticated(true);
-    } catch (e: any) {
-      setError(e.message || "Login failed");
-    } finally {
-      setIsLoading(false);
-    }
+    await new Promise((res) => setTimeout(res, 1000));
+    setUser({ did: 'did:ethr:0xABC123', address: '0xABC123' });
+    setIsAuthenticated(true);
+    setIsLoading(false);
   }, []);
 
   const logout = useCallback(() => {
-    setUser(null);
+    setUser(undefined);
     setIsAuthenticated(false);
   }, []);
 
-  return <QuickLoginContext.Provider value={{ user, isAuthenticated, isLoading, error, login, logout }}>{children}</QuickLoginContext.Provider>;
-};
-
-export const useQuickLoginContext = () => {
-  const ctx = useContext(QuickLoginContext);
-  if (!ctx) throw new Error("useQuickLoginContext must be used within a QuickLoginProvider");
-  return ctx;
+  return (
+    <QuickLoginContext.Provider value={{ user, isAuthenticated, isLoading, login, logout }}>
+      {props.children}
+    </QuickLoginContext.Provider>
+  );
 };
