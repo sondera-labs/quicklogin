@@ -1,0 +1,47 @@
+.sondera-quicklogin.typography.h1 {
+  scroll-margin-top: 5rem;
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 1.25;
+  font-family: var(--font-family);
+  color: var(--primary);
+}
+
+.sondera-quicklogin.typography.h2 {
+  scroll-margin-top: 5rem;
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--primary);
+}
+
+.sondera-quicklogin.typography.h3 {
+  scroll-margin-top: 5rem;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--primary);
+}
+
+.sondera-quicklogin.typography.h4 {
+  scroll-margin-top: 5rem;
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--primary);
+}
+
+.sondera-quicklogin.typography.h5 {
+  scroll-margin-top: 5rem;
+  font-size: 1.125rem; /* text-lg */
+  font-family: var(--font-family);
+  color: var(--primary);
+}
+
+.sondera-quicklogin.typography.p {
+  font-family: var(--font-lausanne);
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--lighter-text);
+}

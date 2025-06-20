@@ -1,0 +1,84 @@
+.sondera-quicklogin.ql-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-xs */
+  transition: background-color 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.sondera-quicklogin.ql-logo {
+  width: 18px;
+  object-fit: contain;
+  height: 18px;
+}
+
+.sondera-quicklogin.ql-button-text {
+  font-size: 16px !important;
+  font-family: var(--font-lausanne) !important;
+  color: var(--primary-foreground) !important;
+  margin: 0 !important;
+}
+
+.sondera-quicklogin.ql-loader {
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sondera-quicklogin.ql-button:hover {
+  background-color: rgba(var(--primary-rgb)); /* hover:bg-primary/90 */
+}
+
+.sondera-quicklogin.ql-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.sondera-quicklogin.ql-button:disabled {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.sondera-quicklogin.ql-button svg {
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.sondera-quicklogin.ql-button:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px rgba(var(--ring-rgb), 0.5);
+}
+
+.sondera-quicklogin.ql-button[aria-invalid='true'] {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 3px rgba(var(--destructive-rgb), 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .sondera-quicklogin.ql-button[aria-invalid='true'] {
+    box-shadow: 0 0 0 3px rgba(var(--destructive-rgb), 0.4);
+  }
+}
